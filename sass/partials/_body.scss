@@ -6,19 +6,46 @@ html {
 
 body {
 	height:100%;
-	background-color:rgba(0,0,0,0.3);
 }
 
-section#intro {
+a {
+	text-transform: uppercase;
+}
+
+section {
+
+	h1 {
+		font-size:3em;
+		color:$brand-color;
+	}
+
+	h2 {
+		font-size:2em;
+	}
+
+	h3 {
+		font-size: 1.4em;
+	}
+
+	h2,h3 {
+		color:$primary-color;
+	}
+}
+
+
+#intro {
+	max-height:960px;
+	height:100%;
 	display:flex;
 	justify-content:center;
 	flex-flow:column;
 	align-content:center;
 	text-align:center;
-	height:100%;
-	color:white;
+	background-color:rgba(0,0,0,0.3);
+	color:#fff;
 	h1 {
 		font-size:5em;
+		color:#fff;
 	}
 
 	h3 {
@@ -26,4 +53,50 @@ section#intro {
 	}
 }
 
+section#accent-section {
+		min-height:400px;
+		background:url('../img/phobig.jpg') no-repeat center center;
+}
 
+section#accent-section-2{
+	min-height:400px;
+	background:url('../img/porkhotbig.jpg') no-repeat center center;
+}
+
+section#about {
+	background-color:$primary-color;
+	padding:50px 0;
+	p {
+		font-size:1em;
+		padding:10px;
+	}
+
+	.col {
+		width:calc(50% - 10px);
+		float:left;
+	}
+
+	.col:after {
+		clear:both;
+	}
+
+	h2 {
+		color:$brand-color;
+		text-align: center;
+	}
+
+	#building {
+		width:75%;
+		margin:0 auto;
+	}
+
+	a {
+		display:block;
+		text-align: center;
+		padding:20px;
+		max-width:200px;
+		margin:0 auto;
+		color:white;
+		background-color:rgba(255,255,255,0.2);
+	}
+}

@@ -1,6 +1,9 @@
 nav {
+	position: fixed;
 	display:block;
+	width:100%;
 	margin:0 auto;
+	height:40px;
 	background-color:rgba(0,0,0,0.7);	
 	ul {
 		margin:0 auto;
@@ -15,6 +18,13 @@ nav {
 	}
 
 	a {
-		color:white;
+		color:#fff;
+		border-bottom:1px solid transparent;
+	}
+
+	a:hover {
+		color:$brand-color;
+		border-bottom:1px solid $brand-color;
+		transition:all 0.25s;
 	}
 }
