@@ -1,7 +1,5 @@
 html {
 	height:100%;
-	background:url('../img/rollingbig.jpg') no-repeat center center fixed;
-	background-size:cover;
 }
 
 body {
@@ -12,8 +10,22 @@ a {
 	text-transform: uppercase;
 }
 
-section {
+img.bg {
+	min-height:100%;
+	min-width: 1024px;
+	width:100%;
+	height:auto;
+	position:fixed;
+	top:0;
+	left:0;
+	z-index:-999;
+	@media screen and (max-width:1024px){
+		min-width:60%;
+	}
+}
 
+section {
+	min-height:400px;
 	h1 {
 		font-size:3em;
 		color:$brand-color;
@@ -41,39 +53,47 @@ section {
 	flex-flow:column;
 	align-content:center;
 	text-align:center;
-	background-color:rgba(0,0,0,0.3);
-	color:#fff;
-	h1 {
-		font-size:5em;
-		color:#fff;
+	background-color:rgba(255,255,255,0.5);
+	color:lighten($primary-color,10%);
+	img {
+		display:block;
+		margin:0 auto;
+		max-width:100%;
 	}
-
-	h3 {
-		font-size:1.75em;
+	p {
+		font-size:1.2em;
+		padding:5px;
 	}
 }
 
 section#accent-section {
-		min-height:400px;
 		background:url('../img/phobig.jpg') no-repeat center center;
 }
 
 section#accent-section-2{
-	min-height:400px;
 	background:url('../img/porkhotbig.jpg') no-repeat center center;
+
 }
 
 section#about {
 	background-color:$primary-color;
+	background-image: url("http://www.transparenttextures.com/patterns/az-subtle.png");
 	padding:50px 0;
+	line-height: 1.4em;
 	p {
-		font-size:1em;
+		color:#fff;
 		padding:10px;
 	}
 
 	.col {
 		width:calc(50% - 10px);
 		float:left;
+		margin:20px 0;
+
+		@media screen and (max-width:800px) {
+			width:100%;
+			float:none;
+		}
 	}
 
 	.col:after {
@@ -83,20 +103,108 @@ section#about {
 	h2 {
 		color:$brand-color;
 		text-align: center;
+		margin:10px 0;
 	}
 
 	#building {
 		width:75%;
 		margin:0 auto;
+		padding:10px;
+
+		@media screen and (max-width:800px) {
+			width:100%;
+		}
 	}
 
-	a {
-		display:block;
-		text-align: center;
-		padding:20px;
-		max-width:200px;
-		margin:0 auto;
-		color:white;
-		background-color:rgba(255,255,255,0.2);
+
+}
+
+.menubutton {
+	display:block;
+	text-align: center;
+	padding:20px;
+	max-width:200px;
+	margin:20px auto;
+	color:white;
+	background-color:lighten($primary-color, 10%);
+}
+
+section#contact {
+	background-color:#fff;
+	background-image: url("http://www.transparenttextures.com/patterns/az-subtle.png");
+	width:100%;
+	max-height:550px;
+	height:100%;
+	h2 {
+		text-align:center;
+		padding:20px 0;
 	}
+
+	div#hours {
+		float:left;
+		width:calc(50% - 20px);
+		margin:10px;
+		text-align:center;
+		line-height: 1.4em;
+		p {
+			font-size:1.2em;
+			margin:10px auto;
+		}
+
+		h3 {
+			font-size:1.75em;
+		}
+	#social-media-links {
+		padding-top:30px;
+		a {
+			color:$brand-color;
+		}
+	}
+	}
+
+	form {
+		text-align: center;
+		float:left;
+		width:calc(50% - 20px);
+		margin-bottom:20px;
+
+		input:not(#submit-button), textarea { 
+			color:$link-color;
+			margin:10px auto;
+			width:100%;
+			letter-spacing: 3px;
+			padding:12px;
+			resize:none;
+		}
+
+		#submit-button{
+			border:none;
+			background-color:$link-color;
+			padding:10px;
+			color:#fff;
+			font-weight:bold;
+			letter-spacing: 3px;
+			transition:all 0.25s;
+		}
+
+		#submit-button:hover {
+			background-color:lighten($link-color, 20%);
+			transition:all 0.25s;
+		}
+		
+	}
+
+	@media screen and (max-width: 680px) {
+		min-height:800px;
+		form, div#hours {
+			width:90%;
+			float:none;
+			margin:0 auto;
+		}
+	}
+}
+
+footer{
+	background-color: rgba(0,0,0,0.7);
+	background-image: url("http://www.transparenttextures.com/patterns/az-subtle.png");
 }

@@ -3,8 +3,10 @@ nav {
 	display:block;
 	width:100%;
 	margin:0 auto;
-	height:40px;
-	background-color:rgba(0,0,0,0.7);	
+	min-height:40px;
+	background: none repeat scroll 0% 0% rgba(0, 0, 0, 0.7);
+	z-index:9999;
+
 	ul {
 		margin:0 auto;
 		display:flex;
@@ -20,6 +22,7 @@ nav {
 	a {
 		color:#fff;
 		border-bottom:1px solid transparent;
+		transition:all 0.25s;
 	}
 
 	a:hover {
@@ -27,4 +30,29 @@ nav {
 		border-bottom:1px solid $brand-color;
 		transition:all 0.25s;
 	}
+
+	#pull {
+		display:none;
+	}
+
+	@media screen and (max-width:680px){
+		nav {text-align: right; min-height: 40px; height:auto;}
+		ul {
+			width:100%;
+			display:none;
+		}
+
+		li {
+			display:block;
+			width:100%;
+		}
+
+		#pull {
+			display:block;
+			 color:$brand-color;
+			 border:none;
+			 padding: 5px 10px;
+			}
+		}
+	
 }
