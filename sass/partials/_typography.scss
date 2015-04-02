@@ -1,9 +1,13 @@
-@import url(http://fonts.googleapis.com/css?family=Droid+Sans|Cabin);
+@import url(http://fonts.googleapis.com/css?family=Rancho|Gudea:400,700);
 
 p, a, figcaption,  span, textarea{
-	font-family:'Cabin', Arial, sans-serif;
+	font-family:'Gudea', Arial, sans-serif;
+	font-weight:normal;
 }
 
+a {font-weight:bold;}
+
 h1,h2, h3, h4, h5, h6,{
-	font-family:'Droid Sans';
+	font-family:'Rancho';
+	font-weight:normal;
 }

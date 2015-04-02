@@ -3,13 +3,12 @@
 	padding:40px 0;
 	height:100%;
 	min-height:400px;
-	background-color: $brand-color;
+	background-color: #fff;
 	background-image: url("http://www.transparenttextures.com/patterns/az-subtle.png");
 /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 
 #menu {
-	color:#fff;
 	h1 {
 		text-align:center;
 		color:$primary-color;
@@ -37,7 +36,6 @@
 		li {
 			width:15%;
 			cursor:pointer;
-			border:1px solid #fff;
 			background-color:$primary-color;
 			margin:0 30px;
 			line-height:1em;
@@ -46,12 +44,12 @@
 		}
 
 		li.active, li:hover {
-				border-color:lighten($primary-color, 10%);
-				background-color:rgba(255,255,255,0.8);
-				color:$primary-color;
+				background-color:$brand-color;
 			}
 
 		a {
+			color:#fff;
+			font-weight:700;
 			display:block;
 			text-align: center;
 			min-width:140px;
