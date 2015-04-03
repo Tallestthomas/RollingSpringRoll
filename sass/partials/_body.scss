@@ -12,7 +12,7 @@ a {
 
 img.bg {
 	min-height:100%;
-	min-width: 1024px;
+	min-width:100%;
 	width:100%;
 	height:auto;
 	position:fixed;
@@ -151,9 +151,6 @@ section#contact {
 			margin:10px auto;
 		}
 
-		h3 {
-			font-size:1.75em;
-		}
 	#social-media-links {
 		padding-top:30px;
 		a {
@@ -200,7 +197,8 @@ section#contact {
 	}
 
 	@media screen and (max-width: 680px) {
-		min-height:800px;
+		min-height:1024px;
+		height:100%;
 		form, div#hours {
 			width:90%;
 			float:none;

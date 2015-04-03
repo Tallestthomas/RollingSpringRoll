@@ -33,7 +33,7 @@ $(pull).on('click', function(e){
     e.preventDefault();
     $(menu).slideToggle();
     $(menuLink).on('click', function(e){
-        if($(menu).is(':visible')) {
+        if($(menu).is(':visible') && $(window).width() < 680) {
             $(menu).slideUp();
         }
     });
